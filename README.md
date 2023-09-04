@@ -13,6 +13,7 @@ Currently this project has the following functionality:
 Instructions coming soon :)
 
 ## How to contribute?
+See our [contributor guide](CONTRIBUTING.md) for more details on how to get involved.
 
 ### Development setup
 
@@ -64,3 +65,8 @@ What happens when you run `make dev-env`?
 3. `clusterctl` is used to bootstrap CAPI components onto the cluster, we use a default configuraion that includes: core Cluster API controller, Kubeadm bootstrap and control plane providers, Docker infrastructure provider.
 4. `Rancher manager` is installed using helm.
 5. Run `tilt up` to start the development environment.
+
+## Code of Conduct
+
+Participation in the project is governed by [Code of Conduct](code-of-conduct.md).
+
