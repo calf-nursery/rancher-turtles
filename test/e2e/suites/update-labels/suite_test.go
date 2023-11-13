@@ -126,6 +126,7 @@ var _ = BeforeSuite(func() {
 	testenv.RancherDeployIngress(ctx, testenv.RancherDeployIngressInput{
 		BootstrapClusterProxy:    setupClusterResult.BootstrapClusterProxy,
 		HelmBinaryPath:           flagVals.HelmBinaryPath,
+		HelmExtraValuesPath:      filepath.Join(flagVals.HelmExtraValuesDir, "deploy-rancher-ingress.yaml"),
 		IsolatedMode:             flagVals.IsolatedMode,
 		NginxIngress:             e2e.NginxIngress,
 		NginxIngressNamespace:    e2e.NginxIngressNamespace,
@@ -141,6 +142,7 @@ var _ = BeforeSuite(func() {
 	testenv.DeployRancher(ctx, testenv.DeployRancherInput{
 		BootstrapClusterProxy:  setupClusterResult.BootstrapClusterProxy,
 		HelmBinaryPath:         flagVals.HelmBinaryPath,
+		HelmExtraValuesPath:    filepath.Join(flagVals.HelmExtraValuesDir, "deploy-rancher.yaml"),
 		InstallCertManager:     false,
 		RancherChartRepoName:   "rancher-latest",
 		RancherChartURL:        "https://releases.rancher.com/server-charts/latest",
